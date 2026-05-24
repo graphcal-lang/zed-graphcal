@@ -18,18 +18,14 @@ impl zed::Extension for GraphcalExtension {
         if let Some(binary) = settings.binary {
             return Ok(zed::Command {
                 command: binary.path.unwrap_or_else(|| "graphcal".to_string()),
-                args: binary
-                    .arguments
-                    .unwrap_or_else(|| vec!["lsp".to_string()]),
+                args: binary.arguments.unwrap_or_else(|| vec!["lsp".to_string()]),
                 env: Default::default(),
             });
         }
 
-        let path = worktree.which("graphcal").ok_or_else(|| {
-            "graphcal not found on PATH. \
-             Install with: cargo install graphcal"
-                .to_string()
-        })?;
+        let path = worktree
+            .which("graphcal")
+            .ok_or_else(|| "graphcal not found on PATH.".to_string())?;
 
         Ok(zed::Command {
             command: path,
