@@ -1,5 +1,11 @@
 # Graphcal Extension for Zed
 
+> [!WARNING]
+> Graphcal is under active development. Expect breaking changes and bugs.
+
+> [!WARNING]
+> Graphcal Zed extension is not yet published.
+
 Provides syntax highlighting and LSP diagnostics for Graphcal (`.gcl`) files in [Zed](https://zed.dev/).
 
 - **Syntax highlighting** via a tree-sitter grammar
@@ -34,10 +40,10 @@ The extension looks for `graphcal` on your `PATH` and runs `graphcal lsp`. To us
     "graphcal-lsp": {
       "binary": {
         "path": "/absolute/path/to/target/release/graphcal",
-        "arguments": ["lsp"]
-      }
-    }
-  }
+        "arguments": ["lsp"],
+      },
+    },
+  },
 }
 ```
 
