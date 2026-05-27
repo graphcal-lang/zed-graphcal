@@ -1,6 +1,6 @@
 id = "graphcal"
 name = "Graphcal"
-version = "0.0.2"
+version = "0.0.3"
 schema_version = 1
 authors = ["shunichironomura"]
 description = "Graphcal language support for Zed"
