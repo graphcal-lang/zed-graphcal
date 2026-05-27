@@ -1,6 +1,6 @@
 id = "graphcal"
 name = "Graphcal"
-version = "0.0.3"
+version = "0.0.4"
 schema_version = 1
 authors = ["shunichironomura"]
 description = "Graphcal language support for Zed"
@@ -8,7 +8,7 @@ repository = "https://github.com/graphcal-lang/zed-graphcal"
 
 [grammars.graphcal]
 repository = "https://github.com/graphcal-lang/tree-sitter-graphcal"
-rev = "main"
+rev = "2acc39e0dd6f061d6e4695dd4a55654ca69fa2a9"
 
 [language_servers.graphcal-lsp]
 name = "Graphcal LSP"
