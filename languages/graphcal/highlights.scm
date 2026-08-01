@@ -179,6 +179,7 @@
 (int_type) @type.builtin
 (datetime_type) @type.builtin
 (complex_type) @type.builtin
+(key_type) @type.builtin
 
 ; Generic constraints and parameter names: D: Dim, I: Index, N: Nat, F: Type
 (generic_constraint) @type.builtin
@@ -313,6 +314,17 @@
 (unfold_expr prev_state: (identifier) @variable.parameter)
 (unfold_expr prev_index: (identifier) @variable.parameter)
 (unfold_expr index: (identifier) @variable.parameter)
+
+; ---------------------------------------------------------------
+; Key introduction forms
+; ---------------------------------------------------------------
+
+(key_form_expr "key" @function.builtin)
+(key_form_expr "fin_key" @function.builtin)
+(key_form_expr "floor_key" @function.builtin)
+(key_form_expr "ceil_key" @function.builtin)
+(key_form_expr "nearest_key" @function.builtin)
+(key_form_expr axis: (ident_path (identifier) @type))
 
 ; ---------------------------------------------------------------
 ; Attributes
