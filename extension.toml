@@ -8,7 +8,7 @@ repository = "https://github.com/graphcal-lang/zed-graphcal"
 
 [grammars.graphcal]
 repository = "https://github.com/graphcal-lang/tree-sitter-graphcal"
-rev = "0752c93d71e8046efa1101de8f157a1966aba4b5"
+rev = "3f68fd0f6c5fa9195785a6a4d2e73779174a5cea"
 
 [language_servers.graphcal-lsp]
 name = "Graphcal LSP"
