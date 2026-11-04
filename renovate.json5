@@ -1,21 +1,9 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["config:best-practices"],
-  minimumReleaseAge: "7 days",
-  lockFileMaintenance: {
-    enabled: true,
-  },
-  packageRules: [
-    {
-      // .github/workflows/actions.lock pins action commits; gh actions-lock strips inline digests.
-      description: "Use the actions lockfile instead of inline digest pins",
-      matchManagers: ["github-actions"],
-      pinDigests: false,
-    },
-    {
-      matchUpdateTypes: ["lockFileMaintenance"],
-      minimumReleaseAge: null,
-    },
+  extends: [
+    "github>graphcal-lang/renovate-config",
+    // Until this repo adopts .github/workflows/actions.lock
+    "helpers:pinGitHubActionDigestsToSemver",
   ],
   customManagers: [
     {
