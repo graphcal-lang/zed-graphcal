@@ -1,18 +1,4 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [
-    "github>graphcal-lang/renovate-config",
-    // Until this repo adopts .github/workflows/actions.lock
-    "helpers:pinGitHubActionDigestsToSemver",
-  ],
-  customManagers: [
-    {
-      customType: "regex",
-      description: "Track the gh-actions-lock version used to verify the actions lockfile",
-      managerFilePatterns: ["/^\\.github/workflows/[^/]+\\.ya?ml$/"],
-      matchStrings: ["gh extension install github/gh-actions-lock --pin (?<currentValue>v[^\\s]+)"],
-      depNameTemplate: "github/gh-actions-lock",
-      datasourceTemplate: "github-releases",
-    },
-  ],
+  extends: ["github>graphcal-lang/renovate-config"],
 }
